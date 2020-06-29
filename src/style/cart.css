@@ -1,0 +1,310 @@
+html {
+  font-size: 18.5px;
+}
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #666;
+  font: 12px/1.5 'Lucida Grande', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53';
+  overflow-y: scroll;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.header,
+.footer {
+  min-width: 1200px;
+}
+.header {
+  background: #fff;
+  height: 44px;
+  background: #0092d8;
+  position: relative;
+  z-index: 50;
+  border-top: 0.1px solid rgba(255, 255, 255, 0);
+}
+.header .logo {
+  float: left;
+  width: 120px;
+  height: 44px;
+  background-image: url(../img/index_service_sprite_v3.png);
+  background-size: 200px 80px;
+  background-position: -80px 0;
+}
+.header .header_nav {
+  float: left;
+}
+.header .header_nav .nav .item {
+  float: left;
+}
+.header .header_nav .nav .item .item_tit {
+  display: block;
+  padding: 0 30px;
+  font-family: \5FAE\8F6F\96C5\9ED1;
+  height: 44px;
+  line-height: 44px;
+  color: #a3c3e6;
+  font-size: 12px;
+}
+.header .header_nav .nav .item .item_tit:hover {
+  color: #fff;
+}
+.header .header_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header .header_right > .right {
+  float: left;
+  position: relative;
+  background: #fff;
+  padding: 0;
+  width: 75px;
+  background: none;
+  height: 44px;
+  cursor: pointer;
+}
+.header .header_right .icon_right {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 12px auto;
+  background-image: url(../img/atom_sprite.png);
+  background-repeat: no-repeat;
+}
+.header .header_right .header_right_search {
+  width: 45px;
+}
+.header .header_right .header_right_search .search_wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 75px;
+  background: none;
+  height: 44px;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  -webkit-user-select: none;
+}
+.header .header_right .header_right_search .search_wrap .icon_search {
+  top: 12px;
+  background-position: -60px -100px;
+}
+.header .header_right .header_right_search .search_wrap > form {
+  display: none;
+}
+.header .header_right .header_right_search .search_wrap > form > input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  height: 43px\9;
+  line-height: 44px;
+  padding: 0 10px 0 35px;
+  border: 0 none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+.header .header_right .header_right_search_hover .search_wrap {
+  width: 250px;
+}
+.header .header_right .header_right_search_hover .search_wrap .icon_search {
+  top: 12px;
+  left: 10px;
+  background-position: -66px -215px;
+}
+.header .header_right .header_right_search_hover .search_wrap > form {
+  display: block;
+}
+.header .header_right .header_right_wx {
+  width: 65px;
+  position: relative;
+}
+.header .header_right .header_right_wx .icon_wx {
+  top: 12px;
+  background-position: -80px -100px;
+}
+.header .header_right .header_right_wx .wx_wrap {
+  display: none;
+  background: #fff;
+  position: absolute;
+  z-index: 51;
+  border-top: 0 none;
+  top: 44px;
+  left: auto;
+  right: -86px;
+  margin: 0;
+}
+.header .header_right .header_right_wx .wx_wrap .wx_code {
+  display: block;
+  border: 0;
+}
+.header .header_right .header_right_wx .wx_wrap:hover {
+  display: block;
+}
+.header .header_right .header_right_wx:hover {
+  background-color: #006fa3;
+}
+.header .header_right .header_right_wx:hover .wx_wrap {
+  display: block;
+}
+.header .header_right .header_right_cart {
+  width: auto;
+  padding: 0 20px;
+}
+.header .header_right .header_right_cart .icon_cart {
+  background-image: url(../img/index_sprite.png);
+  float: left;
+  background-position: -146px -215px;
+  cursor: pointer;
+}
+.header .header_right .header_right_cart .header_cart_num {
+  display: block;
+  float: left;
+  color: #fff;
+  margin: 11px 0 0 5px;
+}
+.header .header_right .header_right_cart:hover {
+  background-color: #006fa3;
+}
+.header .header_right .header_right_user_login_fail {
+  width: 86px;
+  display: block;
+}
+.header .header_right .header_right_user_login_fail .icon_user_main {
+  float: left;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url(../img/index_sprite.png);
+  background-position: -35px -216px;
+  margin-left: 20px;
+}
+.header .header_right .header_right_user_login_fail .user_login_name {
+  display: block;
+  float: left;
+  margin-left: 2px;
+  cursor: pointer;
+  line-height: 44px;
+  color: #fff;
+}
+.header .header_right .header_right_user_login_fail .user_wrap {
+  display: none;
+  width: 291px;
+  background: #fff;
+  position: absolute;
+  margin-left: 302px;
+  z-index: 51;
+  border: 1px solid #d6d6d6;
+  border-top: 0 none;
+  top: 44px;
+  left: auto;
+  right: 0;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row {
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a {
+  width: 100%;
+  display: inline-block;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_atom {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  background: url(../img/atom_sprite.png) no-repeat 10000px 10000px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .fn {
+  color: #333;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_my_order {
+  width: 12px;
+  height: 12px;
+  background-position: -284px -44px;
+  margin: 0 10px 0 20px;
+  position: relative;
+  top: 2px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_my_coupon {
+  width: 20px;
+  height: 20px;
+  background-position: -240px -80px;
+  margin: 0 6px 0 16px;
+  position: relative;
+  top: 4px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_my_score {
+  width: 12px;
+  height: 14px;
+  background-position: -284px -23px;
+  margin: 0 10px 0 20px;
+  position: relative;
+  top: 2px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_my_privilege {
+  width: 12px;
+  height: 12px;
+  background-position: -208px -85px;
+  margin: 0 10px 0 20px;
+  position: relative;
+  top: 2px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a .icon_my_midea_product {
+  width: 12px;
+  height: 12px;
+  background-position: -65px -24px;
+  margin: 0 10px 0 20px;
+  position: relative;
+  top: 2px;
+}
+.header .header_right .header_right_user_login_fail .user_wrap .row a:hover {
+  background-color: #eee;
+}
+.header .header_right .header_right_user_login_fail:hover {
+  background-color: #006fa3;
+}
+.header .header_right .header_right_user_login_fail:hover .user_wrap {
+  display: block;
+}
+.header .header_tz {
+  display: block;
+  font-size: 12px;
+  background: #003b66;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: center;
+  padding: 4px;
+  margin-top: 44px;
+}
+.cart_wrap {
+  margin-top: 50px;
+  position: relative;
+  padding-bottom: 70px;
+}
+.cart_wrap .cart_top {
+  background-color: #fff;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 20px;
+}
+.cart_wrap .cart_top .cart_top_inner {
+  width: 1200px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+.cart_wrap .cart_top .cart_top_inner .cart_title {
+  float: left;
+  font-size: 32px;
+  line-height: 80px;
+  color: #333;
+  font-weight: normal;
+}
