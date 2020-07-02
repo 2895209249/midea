@@ -1,3 +1,6 @@
+.hide{
+    display: none;
+}
 .header{
     height: 44px;
     width: 100%;
@@ -55,7 +58,6 @@
             border-radius: 2px;
             min-height: 412px;
             .login{
-                display: none;
                 .login_way {
                     padding-bottom: 20px;
                     
@@ -125,11 +127,13 @@
                                 a{
                                     color: #999;
                                 }
+                                a:hover{
+                                    color: red;
+                                }
                                 span{
                                     margin: 0 15px;
                                     color: #e0e0e0;
                                 }
-                                
                                 a:last-child{
                                     float: right;
                                 }
@@ -190,9 +194,9 @@
                             border-radius: 2px;
                             background: transparent;
                             margin: 10px 0 10px 0;
-                        }   
+                        }  
                         a{
-                            color: #0086e6; 
+                            color: #0086e6;
                         }
                     }
                     .login_btn {

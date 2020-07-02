@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 .header {
   height: 44px;
   width: 100%;
@@ -56,9 +59,6 @@
   box-shadow: 0 0 4px 0 #d6d6d6;
   border-radius: 2px;
   min-height: 412px;
-}
-.login_container .login_main_wrap .login_wrap .login {
-  display: none;
 }
 .login_container .login_main_wrap .login_wrap .login .login_way {
   padding-bottom: 20px;
@@ -121,6 +121,9 @@
 }
 .login_container .login_main_wrap .login_wrap .login .login_type .login_form form .login_links a {
   color: #999;
+}
+.login_container .login_main_wrap .login_wrap .login .login_type .login_form form .login_links a:hover {
+  color: red;
 }
 .login_container .login_main_wrap .login_wrap .login .login_type .login_form form .login_links span {
   margin: 0 15px;
