@@ -593,7 +593,7 @@ ul {
 }
 .main_wrap .side_nav_wrap .slider ul {
   position: absolute;
-  left: 40%;
+  left: 50%;
   bottom: 10px;
   list-style: none;
   display: inline-block;
@@ -614,7 +614,8 @@ ul {
   border-radius: 50%;
 }
 .main_wrap .side_nav_wrap .slider ul .red {
-  background-color: red;
+  background-color: white;
+  opacity: 1;
 }
 .main_wrap .rec_wrap {
   position: relative;

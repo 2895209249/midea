@@ -112,7 +112,7 @@ define(['jquery', 'cookie'], function($, cookie) {
 
                         $('.operation_delete').on('click', function() {
 
-                            document.cookie = 'shop='
+
                             window.location.reload()
                         });
 

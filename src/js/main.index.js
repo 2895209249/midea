@@ -7,6 +7,7 @@ require.config({
 });
 
 require(['index', 'jquery'], function(index) {
+
     $(function() {
         $('.slider').slider({
             delay: 1000
