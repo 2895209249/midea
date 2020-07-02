@@ -3,6 +3,8 @@ let baseUrl = "http://localhost/midea/"; // 基础路径 必须是绝对路径
 define(['jquery', 'cookie'], function($, cookie) {
     return {
         render: function() {
+            console.log(JSON.parse(localStorage.getItem('shop')));
+
             let shop = cookie.get('shop'); //   获取cookie数据
             // console.log(shop);
             if (shop) {
@@ -100,14 +102,23 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <div class="cart_sum_to_order js_to_order">去结算</div>
                             </div>
                             `;
+
+
                         });
 
+                        console.log();
                         $('.cart_item ').append(tempstr);
                         $('.cart_bottom').append(temp);
+
                         $('.operation_delete').on('click', function() {
-                            document.cookie = "shop=''"
+
+                            document.cookie = 'shop='
                             window.location.reload()
                         });
+
+
+
+
                         let i = 0
                         $('.quanxuan').on('click', function() {
 
@@ -115,7 +126,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 $('.item_choose').addClass("item_choose_checked");
                                 i = 1
                                 $('.js_total_price').text('￥' + parseInt($('.cart_total ').text()))
-                                $('.color_f60 ').text($('.item_sub_selected ').length)
+                                $('.color_f60 ').text(shop.length)
                             } else {
                                 $('.item_choose').removeClass("item_choose_checked");
                                 i = 0

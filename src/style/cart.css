@@ -577,7 +577,7 @@ ul {
 .cart_wrap .cart_body .cart_detail .cart_list .price_old,
 .cart_wrap .cart_body .cart_detail .cart_list .price_new,
 .cart_wrap .cart_body .cart_detail .cart_list .operation_collect,
-.cart_wrap .cart_body .cart_detail .cart_list .operation_delete {
+.cart_wrap .cart_body .cart_detail .cart_list .u {
   display: block;
   cursor: pointer;
 }

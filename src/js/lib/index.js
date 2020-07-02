@@ -27,10 +27,14 @@ define(['jquery', 'slider'], function($) {
                                     </a>
                                 </div>
                                     `;
-                    });
-                    $('.floor_1').html(temp);
 
-                    $('.floor_2').html(temp);
+
+                        if (elm.id <= 5) { $('.floor_1').html(temp); }
+                        if (elm.id >= 5) { $('.floor_2').html(temp); }
+
+                    });
+
+
                 }
             });
         }

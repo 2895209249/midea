@@ -211,8 +211,11 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 </div>
                             </div>
                                  `;
+
+
                     $('.tabs_content_wrap').append(temp2);
                     callback && callback(res.id, res.price);
+                    magnifier()
                     let num = $('#num')
                     $('#plus').on('click', function() {;
                         if (parseInt(num.val()) < 4) {
