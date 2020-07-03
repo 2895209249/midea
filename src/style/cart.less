@@ -3,12 +3,12 @@ html{
 }
 body{
     height: 100%;
-    background-color: #fff;
+    background-color: #f4f4f4;
     color: #666;
     font: 12px/1.5 'Lucida Grande', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53';
     overflow-y: scroll;
 }
-ul{
+ul{ 
     display: block;
     list-style-type: disc;
     // margin-block-start: 1em;
@@ -627,9 +627,7 @@ ul{
         }
         //<!-- S 购物车底部 结算等-->
         .cart_bottom_fixed {
-            z-index: 10;
-            position: fixed;
-            bottom: -2px;
+            z-index: 10;    
             width: 1200px;
             .cart_bottom {
                 width: 100%;
@@ -681,6 +679,7 @@ ul{
             .cart_bottom .cart_sum_delete, .cart_bottom .cart_sum_collect, .cart_bottom .cart_sum_invalid {
                 margin-left: 40px;
                 cursor: pointer;
+                line-height: 60px;
             }
             .cart_bottom .cart_sum_num, .cart_bottom .cart_sum_price {
                 margin-right: 40px;

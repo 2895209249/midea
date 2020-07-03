@@ -21,8 +21,8 @@ function magnifier() {
         big.addClass('show');
         // movebox的大小计算
         movebox.css({
-            width: (smallpic.offset().left * big.offset().left) / bigpic.offset().left + 'px' / 2,
-            height: (smallpic.offset().top * big.offset().top) / bigpic.offset().top + 'px' / 2,
+            width: (smallpic.offset().left * big.offset().left) / bigpic.offset().left + 'px' ,
+            height: (smallpic.offset().top * big.offset().top) / bigpic.offset().top + 'px' ,
         })
 
         // 2.让movebox跟随鼠标移动

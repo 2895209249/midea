@@ -14,4 +14,6 @@ require(['login', 'jquery'], function(login) {
         $('.login').removeClass('hide');
         $('.login_hide').addClass('hide');
     })
-});
+    login.render();
+    
+})

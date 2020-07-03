@@ -1,10 +1,9 @@
 let baseUrl = "http://localhost/midea/"; // 基础路径 必须是绝对路径
 
-define(['jquery', 'cookie'], function($, cookie) {
+define(['jquery', 'cookie'], function ($, cookie) {
     return {
-        render: function(callback) {
+        render: function (callback) {
             let id = location.search.split("=")[1];
-
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/getitem.php`,
@@ -12,7 +11,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                     id: id
                 },
                 dataType: "json",
-                success: function(res) {
+                success: function (res) {
                     let temp = `
                     <div class="product_left">
                         <div class="big hide">
@@ -23,7 +22,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                             <div class="movebox hide"></div>
                         </div>
                         <ul id="thumbnails" class="thumbnails">
-                            <li >
+                            <li class="cur">
                                 <img src="${baseUrl}src/${res.pic}" alt="${baseUrl}src/${res.title}">
                             </li>
                             <li >
@@ -217,26 +216,17 @@ define(['jquery', 'cookie'], function($, cookie) {
                     callback && callback(res.id, res.price);
                     magnifier()
                     let num = $('#num')
-                    $('#plus').on('click', function() {;
-                        if (parseInt(num.val()) < 4) {
-                            num.val(parseInt(num.val()) + 1)
-                        } else {
-                            num.val(5)
-                        }
-                    })
-                    $('#minus').on('click', function() {
-                        if (parseInt(num.val()) > 1) {
-                            num.val(parseInt(num.val()) - 1);
-                        } else {
-                            num.val(1)
-                        }
+                    $('#plus').on('click', function () {
+                        parseInt(num.val()) < 4 ? num.val(parseInt(num.val()) + 1) : num.val(5)
 
+                    })
+                    $('#minus').on('click', function () {
+                        parseInt(num.val()) > 1 ? num.val(parseInt(num.val()) - 1) : num.val(1)
                     })
                 }
-
             });
         },
-        addShopCar: function(id, price, num) {
+        addShopCar: function (id, price, num) {
             let shop = localStorage.getItem('shop');
             let product = {
                 id: id,
@@ -245,13 +235,9 @@ define(['jquery', 'cookie'], function($, cookie) {
             }
             if (shop) { // 存在
                 shop = JSON.parse(shop); // 将字符串转成数组
-                if (shop.some(elm => elm.id == id)) {
-                    shop.forEach(elm => {
-                        elm.id == id ? elm.num = num : null;
-                    });
-                } else {
-                    shop.push(product);
-                }
+                shop.some(elm => elm.id == id)?
+                shop.forEach(elm => {elm.id == id ? elm.num = num : null;}):shop.push(product)
+                
             } else {
                 shop = []; // 不存在新建数组
                 shop.push(product); // 放入商品
