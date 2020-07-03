@@ -236,34 +236,27 @@ define(['jquery', 'cookie'], function($, cookie) {
 
             });
         },
-        addItem: function(id, price, num) {
-            // shop
-            let shop = cookie.get('shop'); // 获取cookie中的购物车 
-            // 获取是为了判断它是否存在
-            // 不存在 创建
-            // 存在 修改
-            let mtag = {
+        addShopCar: function(id, price, num) {
+            let shop = localStorage.getItem('shop');
+            let product = {
                 id: id,
                 price: price,
                 num: num
             }
             if (shop) { // 存在
                 shop = JSON.parse(shop); // 将字符串转成数组
-                // 数组中已经存在了商品的id
-                // 只修改num只 而不是将商品放入数组
                 if (shop.some(elm => elm.id == id)) {
                     shop.forEach(elm => {
                         elm.id == id ? elm.num = num : null;
                     });
                 } else {
-                    shop.push(mtag);
+                    shop.push(product);
                 }
             } else {
                 shop = []; // 不存在新建数组
-                shop.push(mtag); // 放入商品
+                shop.push(product); // 放入商品
             }
-
-            cookie.set('shop', JSON.stringify(shop), 1);
+            localStorage.setItem('shop', JSON.stringify(shop))
         }
     }
 });
