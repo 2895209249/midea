@@ -18,7 +18,7 @@ require(['jquery', 'mtag'], function($, mtag) {
     //     })
     // });
     mtag.render(function(id, price) {
-        $('.add').on('click', function() {4
+        $('.add').on('click', function() {
             mtag.addShopCar(id, price, $('.num').val());
         })
     });
