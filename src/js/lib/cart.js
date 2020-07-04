@@ -1,6 +1,6 @@
 let baseUrl = "http://localhost/midea/"; // 基础路径 必须是绝对路径
 
-define(['jquery'], function ($, cookie) {
+define(['jquery', 'cart'], function ($, cookie) {
     return {
         render: function () {
             let shop = JSON.parse(localStorage.getItem('shop'));
@@ -82,8 +82,8 @@ define(['jquery'], function ($, cookie) {
                                 <div class="cart_sum_to_order js_to_order">去结算</div>
                             </div>
                             `;
-                            
-                            
+
+
 
                         });
                         //渲染
@@ -91,18 +91,18 @@ define(['jquery'], function ($, cookie) {
                         $('.cart_bottom').append(temp);
                         //数量
                         $('.plus').on('click', function () {
-                            let a=$(this).parent().find('.num')
-                            let b=$(this).parent().parent().parent().find('.cart_total ')
-                            let c=$(this).parent().parent().parent().find('.cart_price ').find('.price_new ')
+                            let a = $(this).parent().find('.num')
+                            let b = $(this).parent().parent().parent().find('.cart_total ')
+                            let c = $(this).parent().parent().parent().find('.cart_price ').find('.price_new ')
                             parseInt(a.val()) < 4 ? a.val(parseInt(a.val()) + 1) : a.val(5)
-                            b.text(a.val()*c.text()+'.00')
+                            b.text(a.val() * c.text() + '.00')
                         })
                         $('.minus').on('click', function () {
-                            let a=$(this).parent().find('.num')
-                            let b=$(this).parent().parent().parent().find('.cart_total ')
-                            let c=$(this).parent().parent().parent().find('.cart_price ').find('.price_new ')
+                            let a = $(this).parent().find('.num')
+                            let b = $(this).parent().parent().parent().find('.cart_total ')
+                            let c = $(this).parent().parent().parent().find('.cart_price ').find('.price_new ')
                             parseInt(a.val()) > 1 ? a.val(parseInt(a.val()) - 1) : a.val(1)
-                            b.text(a.val()*c.text()+'.00')
+                            b.text(a.val() * c.text() + '.00')
                         })
                         //删除
                         $('.js_sum_delete ').on('click', function () {
@@ -137,34 +137,34 @@ define(['jquery'], function ($, cookie) {
                         //单选
                         $('.js_item_choose ').on('click', function () {
                             let res = 0
-                            $("input:checked").length == shop.length ? $(".js_all_choose").prop("checked",true):$(".js_all_choose").prop("checked",false)
-                            
+                            $("input:checked").length == shop.length ? $(".js_all_choose").prop("checked", true) : $(".js_all_choose").prop("checked", false)
+
                             if ($("input:checked").is(':checked')) {
-                                Array.from($("input:checked").parent() .parent() .find('.cart_total')).forEach(elm => {
+                                Array.from($("input:checked").parent().parent().find('.cart_total')).forEach(elm => {
                                     res += parseInt(elm.innerHTML)
                                 })
                                 $('.js_total_price').text('￥' + res + '.00');
-                                $('.js_total_check').text(($("input:checked").parent() .parent() .find('.cart_total')).length);
-                                
+                                $('.js_total_check').text(($("input:checked").parent().parent().find('.cart_total')).length);
+
                             } else {
-                                $('.js_total_price').text('￥'+ res + '0.00')
-                                $('.color_f60 ').text(($("input:checked").parent() .parent() .find('.cart_total')).length)
+                                $('.js_total_price').text('￥' + res + '0.00')
+                                $('.color_f60 ').text(($("input:checked").parent().parent().find('.cart_total')).length)
                             }
-                            
+
                         })
-                        
+
                         //全选
                         $('.js_all_choose').on('input', function () {
-                            let res = 0 
+                            let res = 0
                             if ($(this).is(':checked')) {
-                                $(".item_choose").prop("checked",true)
-                                Array.from($("input:checked").parent() .parent() .find('.cart_total')).forEach(elm => {
+                                $(".item_choose").prop("checked", true)
+                                Array.from($("input:checked").parent().parent().find('.cart_total')).forEach(elm => {
                                     res += parseInt(elm.innerHTML)
                                 })
                                 $('.js_total_price').text('￥' + res + '.00');
                                 $('.js_total_check').text(shop.length);
                             } else {
-                                $(".item_choose").prop("checked",false)
+                                $(".item_choose").prop("checked", false)
                                 $('.js_total_price').text('￥' + '0.00')
                                 $('.color_f60 ').text(shop.length)
                             }
@@ -173,6 +173,9 @@ define(['jquery'], function ($, cookie) {
                 });
 
             }
+        },
+        number: function () {
+
         }
     }
 })

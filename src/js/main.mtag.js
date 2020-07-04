@@ -23,5 +23,6 @@ require(['jquery', 'mtag'], function($, mtag) {
         })
     });
 
-
+    console.log(1);
+    
 });

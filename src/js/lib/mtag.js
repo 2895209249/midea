@@ -211,7 +211,6 @@ define(['jquery', 'cookie'], function ($, cookie) {
                             </div>
                                  `;
 
-
                     $('.tabs_content_wrap').append(temp2);
                     callback && callback(res.id, res.price);
                     magnifier()

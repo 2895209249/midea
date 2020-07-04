@@ -7,4 +7,6 @@ require.config({
 
 require(['cart'], function(cart) {
     cart.render();
+    
+    cart.number();
 })
