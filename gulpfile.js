@@ -29,7 +29,7 @@ gulp.task('cssmin', function() {
 // cnpm i gulp-uglify -D
 gulp.task('jsmin', function() {
     return gulp
-        .src(['./src/js/*.js', '!src/js/*.min.js','./src/js/lib/*.js','./src/js/*.slider.js','./src/js/main.*.js'])
+        .src(['./src/js/*.js', '!src/js/*.min.js','!src/js/lib/*.js','!src/js/*.slider.js','!src/js/main.*.js'])
         .pipe(jsmin())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./dist/js'));
