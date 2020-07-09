@@ -1,6 +1,6 @@
 let baseUrl = "http://localhost/midea/"; // 基础路径 必须是绝对路径
 
-define(['jquery', 'cookie'], function ($, cookie) {
+define(['jquery'], function ($, cookie) {
     return {
         render: function (callback) {
             let id = location.search.split("=")[1];

@@ -29,8 +29,8 @@ function magnifier() {
             let ratio = bigpic.width() / smallpic.height(); // 小数 大于1的数
             let uratio = bigpic.height()/ smallpic.width();
             // console.log(bigpic.height() / smallpic.height());
-            console.log(top);
-            console.log(left);
+            // console.log(top);
+            // console.log(left);
             // 边界管理
             if (top <= 0) {
                 top = 0;

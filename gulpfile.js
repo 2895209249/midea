@@ -32,7 +32,7 @@ gulp.task('jsmin', function() {
         .src(['./src/js/*.js', '!src/js/*.min.js','!src/js/lib/*.js','!src/js/*.slider.js','!src/js/main.*.js'])
         .pipe(jsmin())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/js'));  
 });
 
 // 4. 压缩图片

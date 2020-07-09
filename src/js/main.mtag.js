@@ -2,7 +2,6 @@ require.config({
     paths: {
         jquery: './jquery.min',
         mtag: './lib/mtag',
-        cookie: './cookie',
         magnifier: './magnifier',
         public2: './public2'
     },
@@ -23,6 +22,6 @@ require(['jquery', 'mtag'], function($, mtag) {
         })
     });
 
-    console.log(1);
+    // console.log(1);
     
 });
