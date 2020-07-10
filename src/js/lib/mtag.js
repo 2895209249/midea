@@ -145,7 +145,7 @@ define(['jquery'], function ($, cookie) {
                             <h3>数量</h3>
                             <div class="num_wrap" mtag="30007.6.1" id="divEditNum_149826">
                                 <span id="minus" class="minus"> <span class="inner"></span></span>
-                                <input id="num" class="num num_sync" type="tel" value="2" pattern="[0-9]" >
+                                <input id="num" class="num num_sync" type="tel" value="2" pattern="[0-9]" disabled="disabled">
                                 <span id="plus" class="plus"><span class="inner"></span></span>
                                 <div class="stock_quota">
                                     <div class="stock_status">库存 ${res.num}

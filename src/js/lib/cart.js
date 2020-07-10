@@ -52,7 +52,7 @@ define(['jquery', 'cart'], function ($, cookie) {
                                             <!-- 下架或者删除或者换赠品-->
                                             <div class="num_wrap num_wrap_inline">
                                                 <span class="minus "> <span class="inner "></span></span>
-                                                <input class="num " type="text " pattern="\d{0,3} " value="${arr[0].num} ">
+                                                <input class="num " type="text " pattern="\d{0,3} " value="${arr[0].num} " disabled="disabled">
                                                 <span class="plus "><span class="inner "></span></span>
                                                 <div class="cart_product_status js_product_status_258911 "></div>
                                             </div>

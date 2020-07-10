@@ -13,7 +13,7 @@
                 elms = {}, // 命名空间 存储元素
                 defaults = {
                     speed: 1000, // 动画速度
-                    delay: 3000 // 延迟时间  展示使用
+                    delay: 5000 // 延迟时间  展示使用
                 };
 
             $.extend(defaults, options); // 合并参数
@@ -40,7 +40,7 @@
                 }, function() {
                     timer = setInterval(start.bind(null, 1), defaults.delay + defaults.speed);
                 });
-
+  
                 elms.btns.on('click', function() {
                     if (elms.btns.index(this)) {
                         next();

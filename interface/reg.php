@@ -15,7 +15,6 @@
     $res=$mysqli->query($insertUser);
     $mysqli->close();
     if($res){
-        echo '<script>alert("注册成功");</script>';
         echo '<script>location.href="http://localhost/midea/src/html/login.html";</script>';
     }
     
